@@ -1,6 +1,6 @@
 Create a 3D POLYGON
 
-Use you own header file to shade to polygon.
+Use your own header file to shade to polygon.
 
 Use keyboard controls to rotate and translate the object.
 
