@@ -1,4 +1,4 @@
-Create a 3D POLYGON NOt A CUBE
+Create a 3D POLYGON NOT A CUBE
 
 Use your own header file to shade to polygon.
 
