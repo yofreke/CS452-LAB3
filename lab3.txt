@@ -2,7 +2,7 @@ Create a 3D POLYGON NOt A CUBE
 
 Use your own header file to shade to polygon.
 
-Use keyboard controls to rotate and translate the object.
+Use keyboard controls to rotate and translate and scale the object.
 
 Use W,A,S,D to translate the object up,left,down,right respectively.
 
