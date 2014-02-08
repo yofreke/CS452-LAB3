@@ -4,7 +4,7 @@ using namespace std;
 
 void rotate(GLuint locate);
 
-GLuint vaoID,vboID[2];
+GLuint vaoID,vboID[2],eboID;
 GLuint program;
 
 GLfloat pit,yaw,scalar=1;
@@ -52,6 +52,10 @@ void init(){
 	glBindBuffer(GL_ARRAY_BUFFER, vboID[1]);
   glBufferData(GL_ARRAY_BUFFER,sizeof(colorarray),colorarray,GL_STATIC_DRAW);
   glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, 0, (void*)0);
+  
+  glGenBuffers(1,&eboID);
+  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,eboID);
+  glBufferData(GL_ELEMENT_ARRAY_BUFFER,sizeof(elems),elems,GL_STATIC_DRAW);
 
 	ShaderInfo shaders[]={
   { GL_VERTEX_SHADER , "vertexshader.glsl"},
@@ -80,7 +84,7 @@ void display(SDL_Window* screen){
   GLint tempLoc = glGetUniformLocation(program,"modelMatrix");//Matrix that handle the transformations
 	glUniformMatrix4fv(tempLoc,1,GL_FALSE,&trans[0][0]);
 	
-	glDrawElements(GL_POLYGON,24,GL_UNSIGNED_BYTE,elems);
+	glDrawElements(GL_POLYGON,24,GL_UNSIGNED_BYTE,NULL);
 	glFlush();
 	SDL_GL_SwapWindow(screen);
 }
