@@ -35,7 +35,7 @@ GLfloat colorarray[]={1.0f,1.0f,1.0f,1.0f,
  GLubyte elems[]={0,1,2,3,7,4,5,6,
     	          	7,3,0,4,5,6,2,1,
     		  				0,1,5,4,7,3,2,6
-                  };
+                 };
 
 void init(){
 	 glEnable(GL_DEPTH_TEST);
