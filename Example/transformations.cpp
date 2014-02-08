@@ -13,7 +13,7 @@ glm::vec3 cubeTran;
 GLfloat size=10;
 
 GLfloat vertexarray[]={size,size,-size,
-		       						size,-size,-size,
+		       	           size,-size,-size,
                        -size,-size,-size,
                        -size,size,-size,
                        size,size,size,
